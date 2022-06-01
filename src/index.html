@@ -3,12 +3,53 @@
   <head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <section class="textos-portada">
+        <h1>VALIDA TU TARJETA</h1>
+        <h2>EN ESTA PÁGINA WEB</h2>
+      </section>
+      <div class="wave" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(253, 254, 255);"></path></svg></div>
+    </header>
+    <main>
+      <section class="contenedor">
+
+        <div class="imagenTarjetas">
+          <img src="creditCard.png">
+        </div>
+
+        <div class="contenedor-formulario">
+        <form >
+            <p>Ingrese su nombre y apellido</p>
+            <input type="text" id="cliente" placeholder="Ingresar nombre del cliente" required>
+
+            <p>Ingrese su número de tarjeta</p>
+            <input type="number" id="creditCardNumber" placeholder="Ingresar N° de tarjeta" required>
+
+            <p>Ingrese la fecha de vencimiento</p>
+            <input type="date" required>
+
+            <p>Ingrese CVV</p>
+            <input type="number" placeholder="CVV" required><br>
+
+            <input type="submit" id="btnValidar" value="Validar">
+
+            <!--<button id="btnValidar">Validar</button>-->
+            <p id="mensaje"></p>
+        </form>
+      </div>
+         
+      </section>
+    </main>
+    <footer>
+    </footer>
+    
     <script src="index.js" type="module"></script>
+    
   </body>
 </html>
