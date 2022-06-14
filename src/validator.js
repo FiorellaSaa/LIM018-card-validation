@@ -1,15 +1,16 @@
 const validator = {
-  // ...
+  
   isValid:(creditCardNumber)=>{
-    const length = creditCardNumber.length;
+    const longitud = creditCardNumber.length;
     const reverNumber = creditCardNumber.split("").reverse();
     //console.log(reverNumber);
 
     let sumaTotal = 0;
-    for(let i = 0; i < length; i++){
+
+    for(let i = 0; i < longitud; i++){
       let newNumber = parseInt(reverNumber[i]);
 
-      if(i % 2 !==0){
+      if(i % 2 !== 0){
         newNumber = newNumber * 2
         if(newNumber > 9){
 
@@ -22,10 +23,19 @@ const validator = {
     }
     return(sumaTotal % 10) === 0;
   },
-  maskify:(creditCardNumber) => {
-    return creditCardNumber.replace(/.(?=.{4})/g, "#");
+   
+  maskify:(creditCardNumber)=>{
+    let longitud = creditCardNumber.length -4 
+    let end = creditCardNumber.slice(longitud);
+
+    if(creditCardNumber.length < 4){
+      return  creditCardNumber
+    }
+    else{
+      return '#'.repeat(longitud) + end
+    }
   }
-  
+
 }
 
 export default validator;

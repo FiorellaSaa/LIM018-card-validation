@@ -9,10 +9,10 @@ body{
 
 .contenedor{
     padding: 5px 0;
-    width: 90%;
-    max-width: 1000px;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /*header*/
@@ -33,7 +33,7 @@ header{
 
 .textos-portada{
     display: flex;
-    height: 400px;
+    height: 300px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -56,31 +56,41 @@ header{
     width: 100%;
 }
 
-.contenedor{
-    display: flex;
-    justify-content: space-evenly;
+#mensaje{
+    color: red;
+    font-size: 15px;
 }
 
-
-
-.imagenTarjetas img{
-    width: 500px; 
+.imagenTarjetas{
+    width: 400px; 
     margin-right: 200px;
     bottom: 20px;
-    
 }
 
-.contenedor-formulario{
-    width: 50%;
-    
+.formulario{
+    width: 300px;
+    background: hsla(223, 50%, 79%, 0.719);
+    margin: 0px 10px 50px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
-.contenedor-formulario p{
+
+.formulario p{
    padding: 5px;
-  font-size: 20px;
-    
+   font-size: 15px;
+   color: rgb(6, 6, 70);
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.contenedor-formulario input{
+
+.formulario input{
     padding: 5px;
    text-align: center;
-     
+   border-radius: 5px;
+   margin: 5px;
+   border-color: rgb(141, 193, 223);
+ }
+
+ .botons{
+     width: 100%;
  }

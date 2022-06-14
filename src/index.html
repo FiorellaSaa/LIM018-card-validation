@@ -23,24 +23,27 @@
           <img src="creditCard.png">
         </div>
 
-        <div class="contenedor-formulario">
-        <form >
+        <div class="formulario">
+        <form id="form">
             <p>Ingrese su nombre y apellido</p>
-            <input type="text" id="cliente" placeholder="Ingresar nombre del cliente" required>
+            <input type="text" id="cliente" placeholder="Ingresar nombre del cliente">
 
             <p>Ingrese su número de tarjeta</p>
-            <input type="number" id="creditCardNumber" placeholder="Ingresar N° de tarjeta" required>
-
+            <input type="number" id="creditCardNumber" placeholder="Ingresar N° de tarjeta">
+            
             <p>Ingrese la fecha de vencimiento</p>
-            <input type="date" required>
-
+            <input type="date" id="fecha">
+            
             <p>Ingrese CVV</p>
-            <input type="number" placeholder="CVV" required><br>
+            <input type="number" id="cvv" placeholder="CVV"><br>
 
-            <input type="submit" id="btnValidar" value="Validar">
-
+          <div class="botons">
+            <input type="submit"  id="btnValidar" value="Validar">
+            <input type="reset"  id="btnLimpiar" value="Limpiar">
             <!--<button id="btnValidar">Validar</button>-->
             <p id="mensaje"></p>
+          </div>
+            
         </form>
       </div>
          
